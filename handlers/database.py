@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-mysql_engine = create_engine('mysql+mysqldb://root:Admin10!@localhost:3306/nt_desktop_app')
+mysql_engine = create_engine('mysql+mysqldb://root:_admin_3131@localhost:3306/nt_desktop_app')
 
 
 def get_session():

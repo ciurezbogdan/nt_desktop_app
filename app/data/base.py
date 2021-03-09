@@ -40,3 +40,16 @@ def create_order(pizza_list, order_price):
         raise e
     finally:
         session.close()
+
+
+def add_user(first_name, last_name, email, role):
+    new_user = User(first_name=first_name, last_name=last_name, email=email, role=role)
+    session = get_session()
+    try:
+        session.add(new_user)
+        session.commit()
+    except Exception as e:
+        session.rollback()
+        raise e
+    finally:
+        session.close()

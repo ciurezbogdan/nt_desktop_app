@@ -1,6 +1,7 @@
 import tkinter
 from threading import Thread
 from app.data.base import get_db_pizza, create_order
+from app.gui import add_user
 
 
 class OrderFrame(tkinter.Frame):
@@ -64,7 +65,8 @@ class OrderFrame(tkinter.Frame):
                 pizza_name_label.pack(side=tkinter.TOP)
                 pizza_price_label = tkinter.Label(self, text=pizza_item.price)
                 pizza_price_label.pack(side=tkinter.TOP)
-                pizza_order_btn = tkinter.Button(self, text='Add to order', command=lambda item=pizza_item: self.add_pizza_to_order(item))
+                pizza_order_btn = tkinter.Button(self, text='Add to order', command=lambda item=pizza_item: self.
+                                                 add_pizza_to_order(item))
                 pizza_order_btn.pack(side=tkinter.TOP)
 
             # Add elements to frame.
